@@ -1,0 +1,31 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		String sentence="Tamil is a old language";
+		String sentence2="www.gmail.com";
+
+		String [] st=sentence.split("\\s");// argument - regex
+		String [] st2=sentence2.split("\\.");
+
+        // for(String s:st)
+        // {
+        //     System.out.println(s);
+        // }
+        
+        Pattern p=Pattern.compile("\\s");
+        String[]s3=p.split(sentence); //argument - string
+        
+        for(String s:s3)
+        {
+            System.out.println(s);
+        }
+		
+ 		
+
+        
+
+	}
+}
