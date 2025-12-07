@@ -1,0 +1,23 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.StringTokenizer;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+      String mobile ="91-9851544547";
+    //   Pattern p=Pattern.compile("[0-9]{10}");
+    //   Pattern p=Pattern.compile("[6-9][0-9]{9}");//starting number should between the 6-9
+    //   Pattern p=Pattern.compile("(0|91)?[6-9][0-9]{9}");//sometimes user will give (0 or 91) as start number
+    //   Pattern p=Pattern.compile("(0|91)[-]?[6-9][0-9]{9}");// sometimes with hypen(-)
+    
+    
+      Matcher m=p.matcher(mobile);
+      if(m.find())
+          System.out.println(m.group()+" is a valid number");
+      else
+          System.out.println(mobile+" is not a valid number");
+        
+
+	}
+}
