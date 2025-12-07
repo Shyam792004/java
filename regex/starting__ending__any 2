@@ -1,0 +1,29 @@
+//1.starting word
+//2.ending word
+//3.any 2 character in a given sentence
+
+
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Main
+{
+	public static void main(String[] args) {
+		String sentence="Tamil is a old language";
+		
+ 		Pattern p= Pattern.compile("^Tamil");
+ 		Pattern p= Pattern.compile("language$");
+		Pattern p= Pattern.compile("^(T|a)");
+	    Pattern p= Pattern.compile("(T|e)$");
+
+		Matcher m=p.matcher(sentence);
+		
+		while(m.find())
+		{
+		    System.out.println(m.group()+" starts at "+m.start()+" ends at "+m.end());
+		}
+
+        
+
+	}
+}
