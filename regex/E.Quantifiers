@@ -1,0 +1,23 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		String sentence="abaabbaaabbbabab";
+		
+//  		Pattern p=Pattern.compile("a+"); //min 1-a
+//      Pattern p=Pattern.compile("a*"); //any number 0-a,1-a etc
+//      Pattern p=Pattern.compile("a?"); //any number 0-a,1-a etc but singly
+//      Pattern p=Pattern.compile("a{2}"); //exact occurence
+
+
+		Matcher m=p.matcher(sentence);
+		
+		while(m.find())
+		{
+		    System.out.println(m.group()+" starts at "+m.start());
+		}
+		
+ }
+}
