@@ -25,7 +25,6 @@ public class Main
 		Pattern p=Pattern.compile(".");  // all things
 
 //***************************************************************
-
 		Matcher m=p.matcher(sentence);
 		
 		while(m.find())
