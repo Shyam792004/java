@@ -1,0 +1,26 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Main
+{
+	public static void main(String[] args) {
+ 		
+    String sentence="abcabcabcdabcde";
+
+//********************************************************************
+		Pattern p=Pattern.compile("[abc]");//either a or b or c
+		Pattern p=Pattern.compile("[^ab]");//except a or b 
+		
+		Pattern p=Pattern.compile("[a-zA-Z]");//all alphbets
+   	Pattern p=Pattern.compile("[0-9]");//all numbers
+   		
+		Pattern p=Pattern.compile("[^a-zA-Z]");//not all alphbets
+//**********************************************************************		
+		Matcher m=p.matcher(sentence);
+		
+		while(m.find())
+		{
+		    System.out.println(m.group());
+		}
+		
+	}
+}
