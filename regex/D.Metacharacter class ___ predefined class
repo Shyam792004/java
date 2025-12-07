@@ -1,0 +1,37 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+		String sentence="  Tamil Tamilan TamilNadu 600001 &^%$#@!";
+
+//****************************************************************
+ 		Pattern p=Pattern.compile("\\s"); // only space
+ 		Pattern p=Pattern.compile("\\S"); //other than space
+		
+		Pattern p=Pattern.compile("\\d"); //digits
+		Pattern p=Pattern.compile("\\D"); //other than digits
+		
+		Pattern p=Pattern.compile("\\w"); //only word(alphanumeric) - not special symbols
+    Pattern p=Pattern.compile("\\W"); //other than words        - special symbols only
+       	
+    Pattern p=Pattern.compile("\\bTamil");
+		Pattern p=Pattern.compile("\\bTamil\\b");
+		Pattern p=Pattern.compile("Tamil\\B");
+		
+		Pattern p=Pattern.compile("\\GTamil");
+		
+		Pattern p=Pattern.compile(".");  // all things
+
+//***************************************************************
+
+		Matcher m=p.matcher(sentence);
+		
+		while(m.find())
+		{
+		    System.out.println(m.group()+" starts at "+m.start());
+		}
+		
+	}
+}
