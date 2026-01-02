@@ -1,0 +1,72 @@
+import java.util.*;
+class Main
+{
+    public static int findLeftBound(int []arr,int tar)
+    {
+        int n=arr.length;
+        int index=-1;
+        int l =0;
+        int r = n-1;
+        
+        while(l<=r)
+        {
+            int mid = l + (r-l)/2;
+            if(arr[mid]==tar)
+            {
+                index=mid;
+                r=mid-1;//look in the left subarray
+            }
+            else if(arr[mid]<tar)
+            {
+                l = mid+1;
+            }
+            else
+            {
+                r = mid - 1;
+            }
+        }
+        return index;
+    }
+    public static int findRightBound(int []arr,int tar)
+    {
+        int n=arr.length;
+        int index=-1;
+        int l =0;
+        int r = n-1;
+        
+        while(l<=r)
+        {
+            int mid = l + (r-l)/2;
+            if(arr[mid]==tar)
+            {
+                index=mid;
+                l=mid+1;//look in the right subarray
+            }
+            else if(arr[mid]<tar)
+            {
+                l = mid+1;
+            }
+            else
+            {
+                r = mid - 1;
+            }
+        }
+        return index;
+    }
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        int target=sc.nextInt();
+        
+        int left=findLeftBound(arr,target); 
+        int right=findRightBound(arr,target);
+        System.out.println("first occurence: "+left);
+        System.out.println("last occurence: "+right);
+    }
+}
