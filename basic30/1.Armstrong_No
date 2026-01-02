@@ -34,7 +34,6 @@ public class Main
 		}
 		else{
 		    System.out.print("not Armstrong no.");
-		    
 		}
 
 	}
