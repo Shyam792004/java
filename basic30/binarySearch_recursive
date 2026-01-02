@@ -1,0 +1,15 @@
+int binarySearch(int arr[], int l, int r, int target)
+{
+    //“Iterative BS: l <= r in the loop; recursive BS: base case l > r.”
+    if(l > r) 
+         return -1;
+         
+    int mid = l + (r - l)/2;
+    
+    if(arr[mid] == target)
+         return mid;
+    if(arr[mid] < target) 
+        return binarySearch(arr, mid+1, r, target);
+    else 
+        return binarySearch(arr, l, mid-1, target);
+}
