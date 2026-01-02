@@ -1,0 +1,41 @@
+import java.util.*;
+public class Main
+{
+    public static boolean isArmstrong(int n)
+    {
+        int a=n;
+        int x=0;
+        int b=n;
+        int length=0;
+        while(b>0)
+        {
+            b=b/10;
+            length++;
+        }
+        while(n>0)
+        {
+            int rem=n%10;
+            x+=Math.pow(rem,length);
+            n=n/10;
+        }
+        if(a==x)
+        {
+            return true;
+        }
+        return false;
+    }
+    
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+		int n=sc.nextInt();
+		if(isArmstrong(n))
+		{
+		    System.out.print("Armstrong no.");
+		}
+		else{
+		    System.out.print("not Armstrong no.");
+		    
+		}
+
+	}
+}
