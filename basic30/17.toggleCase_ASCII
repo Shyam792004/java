@@ -1,0 +1,32 @@
+import java.util.*;
+class Main
+{
+    public static String toggleChar_ASCII(String str) {
+        int ln = str.length();
+
+        // Conversion according to ASCII values
+        char[] arr = str.toCharArray();
+        for (int i = 0; i < ln; i++)
+        {
+            if (arr[i] >= 'a' && arr[i] <= 'z')
+            {
+                // Convert lowercase to uppercase
+                arr[i] = (char)(arr[i] - 32);           //a-A
+            }
+            else if (arr[i] >= 'A' && arr[i] <= 'Z')
+            {
+                // Convert uppercase to lowercase
+                arr[i] = (char)(arr[i] + 32);           //A-a
+            }
+        }
+        return new String(arr);
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String str=sc.nextLine();
+        String ans=toggleChar_ASCII(str);
+        System.out.println(ans);
+        
+    }
+}
