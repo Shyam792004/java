@@ -1,0 +1,52 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        boolean flag=false;
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+        
+        HashMap<Character,Integer>charCount=new HashMap<>();
+        
+        //geeks
+        for(char c:str1.toCharArray())
+        {
+            charCount.put(c,charCount.getOrDefault(c,0)+1);
+        }
+        
+        // g → 1
+        // e → 2
+        // k → 1
+        // s → 1
+        
+        
+        
+        // Subtract characters using second string
+        // kseeg
+        for(char c:str2.toCharArray())
+        {
+            charCount.put(c,charCount.getOrDefault(c,0)-1);
+        }
+        // g → 0
+        // e → 0
+        // k → 0
+        // s → 0
+        
+        for(var a:charCount.entrySet())
+        {
+            if(a.getValue()!=0)
+            {
+                System.out.print("element found : not anagram");
+                flag=true;
+                break;
+            }
+        }
+        if(flag==false)
+        {
+            System.out.print("strings are anagram");
+        }
+
+    }
+}
