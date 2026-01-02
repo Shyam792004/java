@@ -1,0 +1,45 @@
+import java.util.*;
+class Main
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        boolean flag=false;
+        String s1 = sc.nextLine();
+        String s2 = sc.nextLine();
+        
+       if (s1.length() != s2.length()) 
+       {
+           flag= false;
+       }
+        
+        // for lowercase a-z
+        int[] freq = new int[26];  
+
+        // Count frequency of each character in s1
+        for (int i = 0; i < s1.length(); i++)
+            freq[s1.charAt(i) - 'a']++;
+
+        // Subtract frequency using characters from s2
+        for (int i = 0; i < s2.length(); i++)
+            freq[s2.charAt(i) - 'a']--;
+
+        // Check if all frequencies are zero
+        for (int count : freq) 
+        {
+            if (count != 0)
+            {
+                flag= true;
+                System.out.println("element found: not anagram");
+                break;
+            }
+        }
+
+      
+        if(flag==false)
+        {
+            System.out.print("strings are anagram");
+        }
+
+    }
+}
