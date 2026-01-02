@@ -1,0 +1,42 @@
+import java.util.*;
+class Main
+{
+    public static int bs(int n,int arr[],int target)
+    {
+        int l =0;
+        int r = n-1;
+        //“Iterative BS:     while(l <= r )in the loop; 
+        // recursive BS: base case    if(l > r).”
+        while(l<=r)
+        {
+            int mid = l + (r-l)/2;
+            //“Because (l + r) can exceed the maximum integer value for large numbers, causing overflow. l + (r-l)/2 avoids that issue safely.”
+            if(arr[mid]==target)
+            {
+                return mid;
+            }
+            else if(arr[mid]<target)
+            {
+                l = mid+1;
+            }
+            else
+            {
+                r = mid - 1;
+            }
+        }
+        return -1;
+    }
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+        for(int i=0;i<n;i++)
+        {
+            arr[i] = sc.nextInt();
+        }
+        int target = sc.nextInt();
+        int ans = bs(n,arr,target);
+        System.out.println("found at index:"+ans);
+    }
+}
