@@ -1,0 +1,33 @@
+import java.util.*;
+class Main
+{
+    
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        String s=sc.nextLine();
+        
+        String [] words=s.split(" ");
+        
+        for(int i=0;i<words.length;i++)
+        {
+            String word=words[i];
+            for(int j=word.length()-1;j>=0;j--)
+            {
+                System.out.print(word.charAt(j));
+            }
+            System.out.print(" ");
+        }
+        
+    }
+}
+-------------------------------------------------------------------
+tc and sc: O(n) O(n)
+String: "Hello World"
+
+Outer loop i: 0 -> 1 (words)
+Inner loop j: 
+  i=0 -> j=4,3,2,1,0  (5 steps)
+  i=1 -> j=4,3,2,1,0  (5 steps)
+
+Total steps = 5 + 5 = 10 = length of string = n
