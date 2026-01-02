@@ -26,8 +26,7 @@ public class Main
 		    System.out.print("Armstrong no.");
 		}
 		else{
-		    System.out.print("not Armstrong no.");
-		    
+		    System.out.print("not Armstrong no.");  
 		}
 	}
 }
