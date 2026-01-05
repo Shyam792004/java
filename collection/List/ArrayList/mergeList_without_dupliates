@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4));
+        ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(3, 4, 5, 6));
+
+        // Merge lists
+        ArrayList<Integer> mergedList = new ArrayList<>(list1);
+        mergedList.addAll(list2);
+
+        // Remove duplicates using HashSet
+        HashSet<Integer> hs = new HashSet<>(mergedList);
+
+        // Convert back to ArrayList (if needed)
+        ArrayList<Integer> uniqueList = new ArrayList<>(hs);
+
+        System.out.println("Merged List without duplicates: " + uniqueList);
+    }
+}
