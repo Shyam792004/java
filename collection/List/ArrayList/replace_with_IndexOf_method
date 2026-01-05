@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 2, 4, 2, 5));
+
+        int oldElement = 2;
+        int newElement = 99;
+
+        int index = list.indexOf(oldElement); // find first occurrence
+
+        // Loop while there is still oldElement in the list
+        while (index != -1) {
+            list.set(index, newElement); // replace it
+            index = list.indexOf(oldElement); // find next occurrence
+        }
+
+        System.out.println("Updated List: " + list);
+    }
+}
