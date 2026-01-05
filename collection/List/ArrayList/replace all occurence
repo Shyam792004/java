@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(1, 2, 3, 2, 4, 2, 5));
+
+        int oldElement = 2;
+        int newElement = 99;
+
+        // Replace all occurrences
+        for (int i = 0; i < list.size(); i++) {
+            if (list.get(i) == oldElement) {
+                list.set(i, newElement);
+            }
+        }
+
+        System.out.println("Updated List: " + list);
+    }
+}
