@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        ArrayList<String> list = new ArrayList<>();
+        list.add("A");
+        list.add("B");
+        list.add("C");
+        list.add("D");
+
+        int left = 0;
+        int right = list.size() - 1;
+
+        while (left < right) {
+            // Swap elements
+            String temp = list.get(left);
+            list.set(left, list.get(right));
+            list.set(right, temp);
+
+            left++;
+            right--;
+        }
+
+        System.out.println("Reversed List (in-place): " + list);
+    }
+}
