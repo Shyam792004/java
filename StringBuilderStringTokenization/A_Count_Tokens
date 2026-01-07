@@ -1,0 +1,6 @@
+
+       String str="Java|Python|C++|C#";
+       StringTokenizer st=new StringTokenizer(str,"|");
+       
+       int cnt=st.countTokens();
+       System.out.println(cnt);
