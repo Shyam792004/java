@@ -1,0 +1,10 @@
+
+       String str="Java|Python|C++|C#";
+       
+       //set delimiter
+       StringTokenizer st=new StringTokenizer(str," ");
+       
+      while (st.hasMoreTokens()) 
+      {
+         System.out.println(st.nextToken()); 
+       }
