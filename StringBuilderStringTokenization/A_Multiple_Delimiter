@@ -1,0 +1,9 @@
+
+       String str="Java|Python;C++ C#";
+       String delims=" ;";
+       StringTokenizer st=new StringTokenizer(str,delims);
+       
+      while (st.hasMoreTokens()) 
+      {
+         System.out.println(st.nextToken()); 
+       }
