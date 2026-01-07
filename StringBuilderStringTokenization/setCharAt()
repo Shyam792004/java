@@ -1,0 +1,9 @@
+        Scanner sc=new Scanner(System.in);
+        
+        StringBuilder sb=new StringBuilder("Hello World");
+        
+        // System.out.println(sb.setCharAt(0,'S'));//cause error because void method
+        
+        
+        sb.setCharAt(0,'X');
+        System.out.println(sb);
