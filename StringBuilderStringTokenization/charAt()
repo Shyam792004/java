@@ -1,6 +1,5 @@
 
 
-
         StringBuilder sb=new StringBuilder("Hello World");
         
         System.out.println(sb.charAt(3));
