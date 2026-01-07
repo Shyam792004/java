@@ -1,0 +1,8 @@
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        
+        StringBuilder sb=new StringBuilder("Hello World");
+        sb.insert(6,"Java ");
+        System.out.println(sb);//both print are same
+    }
