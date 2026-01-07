@@ -1,0 +1,8 @@
+        StringBuilder sb=new StringBuilder("Hello World");
+        sb.deleteCharAt(2);
+        sb.deleteCharAt(2);
+        System.out.println(sb);
+        
+        //stringbuilder follows stack so when the char first delete it next thing move left 
+        
+        //output - Heo World
