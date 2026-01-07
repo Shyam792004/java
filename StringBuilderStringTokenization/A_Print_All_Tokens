@@ -1,0 +1,8 @@
+
+       String str="Java,Python,C++,C#";
+       StringTokenizer st=new StringTokenizer(str,",");
+       
+       while(st.hasMoreTokens())
+       {
+           System.out.println(st.nextToken());
+       }
