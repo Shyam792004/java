@@ -1,0 +1,6 @@
+
+        StringBuilder sb=new StringBuilder("Hello World");
+        // sb.delete("World"); not work
+        sb.delete(6,11);
+        System.out.println(sb);
+ 
