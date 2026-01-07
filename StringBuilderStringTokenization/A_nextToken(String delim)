@@ -1,0 +1,28 @@
+import java.util.StringTokenizer;
+
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        String str = "Java,Python,C++,C#";
+        
+        // Initialize with a dummy delimiter (space)
+        StringTokenizer st = new StringTokenizer(str, " ");
+
+        System.out.println("Switching delimiters while iterating:");
+
+        while (st.hasMoreTokens())
+        {
+            // We tell nextToken to use  delimiter="," instead of the original delimiter=" "
+            System.out.println(st.nextToken(","));
+        }
+    }
+}
+
+Output:
+
+Switching delimiters while iterating:
+Java
+Python
+C++
+C#
