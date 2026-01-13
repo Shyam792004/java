@@ -1,0 +1,25 @@
+import java.util.LinkedList;
+
+public class LinkedListExample {
+    public static void main(String[] args) {
+
+        // Create LinkedList
+        LinkedList<String> list = new LinkedList<>();
+
+        // Insert at the end
+        list.add("Java");
+        list.add("Spring");
+
+        // Insert at the start
+        list.addFirst("Core");
+
+        // Insert at the middle (index-based)
+        list.add(1, "Advanced");
+
+        // Insert at the end (another way)
+        list.addLast("Hibernate");
+
+        // Print the LinkedList
+        System.out.println(list);
+    }
+}
