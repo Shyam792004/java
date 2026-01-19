@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        String text = "hello world hello java world java java";
+
+        // Split the string into words
+        String[] words = text.split(" "); // split by spaces
+
+        // Create a HashMap to store word frequencies
+        HashMap<String, Integer> frequencyMap = new HashMap<>();
+
+        // Count the frequency of each word
+        for (String word : words) {
+            // If the word exists, increment its count; else start with 1
+            frequencyMap.put(word, frequencyMap.getOrDefault(word, 0) + 1);
+        }
+
+        // Print the frequency of each word
+        for (Map.Entry<String, Integer> entry : frequencyMap.entrySet()) {
+            System.out.println(entry.getKey() + " : " + entry.getValue());
+        }
+    }
+}
