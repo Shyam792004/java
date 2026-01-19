@@ -1,0 +1,21 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        TreeSet<Integer> treeSet = new TreeSet<>();
+        
+        // Add elements
+        treeSet.add(1);
+        treeSet.add(5);
+        treeSet.add(10);
+        treeSet.add(15);
+        treeSet.add(20);
+        treeSet.add(25);
+
+        // Create a subset from 10 (inclusive) to 20 (exclusive)
+        SortedSet<Integer> subset = treeSet.subSet(10, 20);
+
+        System.out.println("Original TreeSet: " + treeSet);
+        System.out.println("Subset from 10 to 20: " + subset);
+    }
+}
