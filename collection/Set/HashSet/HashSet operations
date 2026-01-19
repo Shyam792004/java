@@ -1,0 +1,36 @@
+import java.util.HashSet;
+
+public class HashSetOperations {
+    public static void main(String[] args) {
+        // Create two HashSets
+        HashSet<Integer> set1 = new HashSet<>();
+        HashSet<Integer> set2 = new HashSet<>();
+
+        // Add elements to set1
+        set1.add(1);
+        set1.add(2);
+        set1.add(3);
+        set1.add(4);
+
+        // Add elements to set2
+        set2.add(3);
+        set2.add(4);
+        set2.add(5);
+        set2.add(6);
+
+        // Union: all elements from both sets
+        HashSet<Integer> union = new HashSet<>(set1); // make a copy of set1
+        union.addAll(set2); // add all elements from set2
+        System.out.println("Union: " + union); // Output: [1, 2, 3, 4, 5, 6]
+
+        // Intersection: elements present in both sets
+        HashSet<Integer> intersection = new HashSet<>(set1); // copy of set1
+        intersection.retainAll(set2); // keep only elements also in set2
+        System.out.println("Intersection: " + intersection); // Output: [3, 4]
+
+        // Difference: elements in set1 but not in set2
+        HashSet<Integer> difference = new HashSet<>(set1); // copy of set1
+        difference.removeAll(set2); // remove elements that are in set2
+        System.out.println("Difference (set1 - set2): " + difference); // Output: [1, 2]
+    }
+}
