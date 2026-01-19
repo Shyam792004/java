@@ -1,0 +1,18 @@
+
+        
+        
+        Scanner sc=new Scanner(System.in);
+        Map<String,Integer>mp=new HashMap<>();
+        mp.put("shyam",90);
+        mp.put("vijay",80);
+        mp.put("sk",88); 
+        
+        int target=sc.nextInt();
+        
+        for(Map.Entry<String,Integer>entry:mp.entrySet())
+        {
+            if(entry.getValue()>target)
+            {
+                System.out.println(entry.getKey());
+            }
+        }
