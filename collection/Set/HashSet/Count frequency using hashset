@@ -1,0 +1,37 @@
+
+
+class Main 
+{
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        
+        ArrayList<Integer>alist=new ArrayList<>();
+        alist.add(1);
+        alist.add(2);
+        alist.add(3);
+        alist.add(2);
+        alist.add(1);
+        alist.add(1);
+        alist.add(3);
+        
+        Set<Integer>st=new HashSet<>(alist);
+        
+        for(Integer unique:st)
+        {
+            int cnt=0;
+            for(Integer li:alist)
+            {
+                if(unique.equals(li))
+                {
+                    cnt++;
+                }
+            }
+            System.out.println(unique+" count= " +cnt);
+           
+        }
+        
+        
+        
+    }
+}
