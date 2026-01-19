@@ -1,0 +1,16 @@
+
+
+
+        for(int i=0;i<n;i++)
+        {
+            arr[i]=sc.nextInt();
+        }
+        LinkedList<Integer> ll=new LinkedList<>();
+        for(int i:arr)
+        {
+            ll.add(i);
+        }
+        
+        System.out.println("first : "+ll.removeFirst()+" last: "+ll.removeLast());
+        
+        System.out.println(ll);
