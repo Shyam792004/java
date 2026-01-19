@@ -1,0 +1,26 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        // Create a HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("shyam", 90);
+        map.put("vijay", 80);
+        map.put("sk", 88);
+
+        System.out.println("Original Map: " + map);
+
+        // Update value for a specific key
+        String keyToUpdate = "vijay";
+        int newValue = 95;
+
+        if (map.containsKey(keyToUpdate)) {
+            map.put(keyToUpdate, newValue); // overwrites old value
+            System.out.println(keyToUpdate + " updated to " + newValue);
+        } else {
+            System.out.println(keyToUpdate + " does not exist in the map.");
+        }
+
+        System.out.println("Updated Map: " + map);
+    }
+}
