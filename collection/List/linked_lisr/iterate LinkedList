@@ -1,0 +1,15 @@
+
+
+
+
+        LinkedList<Integer> ll=new LinkedList<>();
+        for(int i:arr)
+        {
+            ll.add(i);
+        }
+        
+        Iterator<Integer>it=ll.iterator();
+        while(it.hasNext())
+        {
+            System.out.println(it.next());
+        }
