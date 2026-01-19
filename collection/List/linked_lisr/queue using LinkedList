@@ -1,0 +1,33 @@
+import java.util.LinkedList;
+
+
+***************************************************************************
+Enqueue → addLast(element) 
+
+Dequeue → removeFirst() 
+
+Peek → getFirst() 
+***************************************************************************
+
+
+public class BasicQueue {
+    public static void main(String[] args) {
+        // Create a LinkedList to act as a Queue
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        // Enqueue elements (add to the end)
+        queue.addLast(10);
+        queue.addLast(20);
+        queue.addLast(30);
+        System.out.println("Queue after enqueuing: " + queue);
+
+        // Dequeue elements (remove from the front)
+        int removedElement = queue.removeFirst();
+        System.out.println("Dequeued element: " + removedElement);
+        System.out.println("Queue after dequeuing: " + queue);
+
+        // Peek at the front element without removing
+        int front = queue.getFirst();
+        System.out.println("Front element: " + front);
+    }
+}
