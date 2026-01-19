@@ -1,0 +1,15 @@
+
+
+
+    LinkedList<Integer> linkedList = new LinkedList<>();
+        linkedList.add(10);
+        linkedList.add(20);
+        linkedList.add(30);
+        linkedList.add(40);
+
+        // Convert LinkedList to ArrayList
+        ArrayList<Integer> arrayList = new ArrayList<>(linkedList);
+
+        // Print the ArrayList
+        System.out.println("ArrayList: " + arrayList);
+    
