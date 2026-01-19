@@ -1,0 +1,26 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        // Create a HashMap
+        HashMap<String, Integer> map = new HashMap<>();
+        map.put("shyam", 90);
+        map.put("vijay", 80);
+        map.put("sk", 88);
+
+        System.out.println("Original Map: " + map);
+
+        // Key to remove
+        String keyToRemove = "vijay";
+
+        // Remove the key-value pair
+        if (map.containsKey(keyToRemove)) {
+            map.remove(keyToRemove);
+            System.out.println(keyToRemove + " removed from the map.");
+        } else {
+            System.out.println(keyToRemove + " does not exist in the map.");
+        }
+
+        System.out.println("Updated Map: " + map);
+    }
+}
