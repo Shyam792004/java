@@ -1,0 +1,39 @@
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+    public static void main(String[] args) {
+        LinkedList<Integer> list = new LinkedList<>();
+
+        // Adding elements
+        list.add(10);             // add at the end
+        list.addFirst(5);         // add at the start
+        list.addLast(20);         // add at the end
+        list.add(1, 7);           // add at specific index
+        System.out.println("After adding: " + list); // [5, 7, 10, 20]
+
+        // Accessing elements
+        System.out.println("First element: " + list.getFirst()); // 5
+        System.out.println("Last element: " + list.getLast());   // 20
+        System.out.println("Element at index 2: " + list.get(2)); // 10
+
+        // Removing elements
+        list.removeFirst();      // removes 5
+        list.removeLast();       // removes 20
+        list.remove(1);          // removes element at index 1
+        System.out.println("After removing: " + list); // [7]
+
+        // Other useful operations
+        list.offer(15);          // adds at the end (queue style)
+        list.offerFirst(3);      // adds at the front
+        list.offerLast(25);      // adds at the end
+        System.out.println("After offer: " + list); // [3, 7, 15, 25]
+
+        System.out.println("Peek first: " + list.peekFirst()); // 3
+        System.out.println("Peek last: " + list.peekLast());   // 25
+
+        System.out.println("Poll first (remove and return): " + list.pollFirst()); // 3
+        System.out.println("Poll last (remove and return): " + list.pollLast());   // 25
+
+        System.out.println("Final List: " + list); // [7, 15]
+    }
+}
