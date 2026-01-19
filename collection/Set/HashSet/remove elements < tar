@@ -1,0 +1,15 @@
+
+
+
+
+      Iterator<Integer>it=st.iterator();
+       while(it.hasNext())
+       {
+           int i=it.next();
+           if(i<tar)
+           {
+               it.remove();
+           }
+       }
+       
+       System.out.println(st);
